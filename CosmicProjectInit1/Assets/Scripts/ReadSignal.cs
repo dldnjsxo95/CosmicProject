@@ -25,13 +25,13 @@ public class ReadSignal : MonoBehaviour
 		spawnIndex = 0;
 
 		// 리스폰 파일 읽기
-		TextAsset textFile = Resources.Load("TestText") as TextAsset;
+		TextAsset textFile = Resources.Load("testMIdiText") as TextAsset;
 		StringReader stringReader = new StringReader(textFile.text);
 
 		while (stringReader != null)
 		{
 			string line = stringReader.ReadLine();
-
+			print(line);
 			if (line == null)
 				break;
 
@@ -65,6 +65,17 @@ public class ReadSignal : MonoBehaviour
 	{
 		int setSpawn = 0;
 
+		switch(spawnList[spawnIndex].OnOff)
+		{
+			case "On":
+				setSpawn = 1;
+				break;
+			case "Off":
+				setSpawn = 2;
+				break;
+		}
+
+
 		if (spawnList[spawnIndex].location == 60 && spawnPoint60 != null)
 		{
 			if (setSpawn == 1) spawnPoint60.SetActive(true);
@@ -72,7 +83,7 @@ public class ReadSignal : MonoBehaviour
 		}
 
 
-		if (spawnList[spawnIndex].location == 72 && spawnPoint72 != null)
+		if (spawnList[spawnIndex].location == 72 && spawnPoint60 != null)
 		{
 			if (setSpawn == 1) spawnPoint72.SetActive(true);
 			if (setSpawn == 2) spawnPoint72.SetActive(false);

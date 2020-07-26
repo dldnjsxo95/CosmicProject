@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         Move();
-       
+        ChangeColor();
         
     }
 
@@ -31,6 +31,11 @@ public class Player : MonoBehaviour
         dir.Normalize();
 
         transform.position += dir * speed * Time.deltaTime;
+    }
+
+    private void ChangeColor()
+    {
+
     }
 
     //void OnTriggerEnter(Collider other)

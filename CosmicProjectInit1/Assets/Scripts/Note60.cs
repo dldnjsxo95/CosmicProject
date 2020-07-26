@@ -8,7 +8,7 @@ public class Note60 : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     void Update()
@@ -16,13 +16,13 @@ public class Note60 : MonoBehaviour
         transform.position -= Vector3.forward * speed * Time.deltaTime;
     }
 
-	private void OnCollisionEnter(Collision other)
-	{
-        if(other.gameObject.name.Contains("Player"))
-		{
-            SpawnPoint60.note.Add(gameObject);
-            gameObject.SetActive(false);
-		}
-	}
+    //private void OnCollisionEnter(Collision other)
+    //{
+    //    if (other.gameObject.name.Contains("Player"))
+    //    {
+    //        SpawnPoint60.note.Add(gameObject);
+    //        gameObject.SetActive(false);
+    //    }
+    //}
 
 }

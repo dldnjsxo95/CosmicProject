@@ -18,11 +18,13 @@ public class SpawnPoint60 : MonoBehaviour
 	public static List<GameObject> note = new List<GameObject>();
 
 	float curTime;
-	public float delayTime = 2; 
+	public float delayTime = 2;
+	public float rematinTime = 2;
+	public float makeDelayTime = 0.12f;
 
 	void Awake()
 	{
-		for(int i = 0; i< numberOfNote; i++ )
+		for (int i = 0; i < numberOfNote; i++)
 		{
 			note.Add(Instantiate(notePrefab));
 			note[i].transform.SetParent(noteParent.transform);
@@ -32,25 +34,30 @@ public class SpawnPoint60 : MonoBehaviour
 
 	private void OnEnable()
 	{
-		curTime = 0;
-		note[0].transform.position = transform.position;
-		note[0].SetActive(true);
-		note.RemoveAt(0);
-
+		StartCoroutine(GenerateNote());
 	}
 
-
-	private void Update()
+	IEnumerator GenerateNote()
 	{
-		curTime += Time.deltaTime;
 
-		if(curTime > delayTime )
+		while (true)
 		{
-			curTime = 0;
-			note[0].transform.position = transform.position;
-			note[0].SetActive(true);
-			note.RemoveAt(0);
+			for (int i = 0; i < rematinTime / makeDelayTime; i++)
+			{
+				note[0].transform.position = transform.position;
+				note[0].SetActive(true);
+				note.RemoveAt(0);
+
+				yield return new WaitForSeconds(makeDelayTime);
+			}
+
+			yield return new WaitForSeconds(delayTime);
 		}
+	}
+
+	private void OnDisable()
+	{
+		StopCoroutine(GenerateNote());
 	}
 
 }

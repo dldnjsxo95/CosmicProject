@@ -4,25 +4,25 @@ using UnityEngine;
 
 public class Note60 : MonoBehaviour
 {
-    public float speed;
+	public float speed;
 
-    void Start()
-    {
+	void Start()
+	{
 
-    }
+	}
 
-    void Update()
-    {
-        transform.position -= Vector3.forward * speed * Time.deltaTime;
-    }
+	void Update()
+	{
+		transform.position -= Vector3.forward * speed * Time.deltaTime;
+	}
 
-    //private void OnCollisionEnter(Collision other)
-    //{
-    //    if (other.gameObject.name.Contains("Player"))
-    //    {
-    //        SpawnPoint60.note.Add(gameObject);
-    //        gameObject.SetActive(false);
-    //    }
-    //}
+	private void OnTriggerEnter(Collider other)
+	{
+		if (other.gameObject.name.Contains("Player"))
+		{
+			SpawnPoint60.note.Add(gameObject);
+			gameObject.SetActive(false);
+		}
+	}
 
 }

@@ -33,22 +33,23 @@ public class Player : MonoBehaviour
         transform.position += dir * speed * Time.deltaTime;
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Notes")
-        {
-            print("123");
-            Destroy(other.gameObject);
+    //void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.gameObject.tag == "Notes")
+    //    {
+    //        print("123");
+    //        other.gameObject.SetActive(false);
 
-        }
-    }
-    void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.tag == "Notes")
-        {
-            print("123");
-            Destroy(other.gameObject);
 
-        }
-    }
+    //    }
+    //}
+    //void OnCollisionEnter(Collision other)
+    //{
+    //    if (other.gameObject.tag == "Notes")
+    //    {
+    //        print("123");
+    //        other.gameObject.SetActive(false)
+
+    //    }
+    //}
 }

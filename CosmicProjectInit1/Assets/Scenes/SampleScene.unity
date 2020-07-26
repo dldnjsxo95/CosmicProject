@@ -334,7 +334,7 @@ MonoBehaviour:
   notePrefab: {fileID: 5191177546102580108, guid: 6091259e8c690b24696c85aa96cf2be6,
     type: 3}
   noteParent: {fileID: 1962382395}
-  numberOfNote: 100
+  numberOfNote: 30
   delayTime: 8
   rematinTime: 2
   makeDelayTime: 0.12
@@ -370,7 +370,7 @@ MonoBehaviour:
   notePrefab: {fileID: 1684819872790391486, guid: 82c39787fc8f72d48bbe9a57a497bc84,
     type: 3}
   noteParent: {fileID: 707063327}
-  numberOfNote: 100
+  numberOfNote: 30
   delayTime: 2
   rematinTime: 2
   makeDelayTime: 0.12
@@ -479,6 +479,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1754617440469441715, guid: cb5086b6430285d488031b6811c9dddf,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 12.256323
       objectReference: {fileID: 0}
     - target: {fileID: 1754617440469441727, guid: cb5086b6430285d488031b6811c9dddf,
         type: 3}

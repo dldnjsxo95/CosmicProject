@@ -23,7 +23,7 @@ public class ReadSignal : MonoBehaviour
 		// 변수 초기화
 		spawnList.Clear();
 		spawnIndex = 0;
-	
+
 		// 리스폰 파일 읽기
 		TextAsset textFile = Resources.Load("TestText") as TextAsset;
 		StringReader stringReader = new StringReader(textFile.text);
@@ -37,7 +37,7 @@ public class ReadSignal : MonoBehaviour
 
 			// 리스폰 데이터 생성
 			Spawn spawnData = new Spawn();
-			spawnData.delay = float.Parse(line.Split(',')[0]); // 1. 시간 판단
+			spawnData.delay = float.Parse(line.Split(',')[0]) / 1000; // 1. 시간 판단
 			spawnData.OnOff = line.Split(',')[1];// 3. on off 변경
 			spawnData.channel = int.Parse(line.Split(',')[2]);
 			spawnData.location = int.Parse(line.Split(',')[3]);// 2. 60,72 판단
@@ -52,7 +52,7 @@ public class ReadSignal : MonoBehaviour
 
 	private void Update()
 	{
-		currentDelayTime += 500*Time.deltaTime; // 스폰 시간 증가
+		currentDelayTime += Time.deltaTime; // 스폰 시간 증가
 
 		if (currentDelayTime > spawnList[spawnIndex].delay)
 		{
@@ -89,7 +89,7 @@ public class ReadSignal : MonoBehaviour
 		}
 
 		spawnIndex++;
-
+		print(spawnIndex);
 	}
 
 }

@@ -65,16 +65,6 @@ public class ReadSignal : MonoBehaviour
 	{
 		int setSpawn = 0;
 
-		switch (spawnList[spawnIndex].OnOff)
-		{
-			case "On":
-				setSpawn = 1;
-				break;
-			case "Off":
-				setSpawn = 2;
-				break;
-		}
-
 		if (spawnList[spawnIndex].location == 60 && spawnPoint60 != null)
 		{
 			if (setSpawn == 1) spawnPoint60.SetActive(true);

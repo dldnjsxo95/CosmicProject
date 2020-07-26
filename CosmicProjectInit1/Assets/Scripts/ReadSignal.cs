@@ -8,7 +8,6 @@ public class ReadSignal : MonoBehaviour
 	public List<Spawn> spawnList;
 	public GameObject spawnPoint60;
 	public GameObject spawnPoint72;
-	public bool spawnEnd;
 
 	int spawnIndex;
 	float currentDelayTime;
@@ -24,8 +23,7 @@ public class ReadSignal : MonoBehaviour
 		// 변수 초기화
 		spawnList.Clear();
 		spawnIndex = 0;
-		spawnEnd = false;
-
+	
 		// 리스폰 파일 읽기
 		TextAsset textFile = Resources.Load("TestText") as TextAsset;
 		StringReader stringReader = new StringReader(textFile.text);
@@ -54,7 +52,7 @@ public class ReadSignal : MonoBehaviour
 
 	private void Update()
 	{
-		currentDelayTime += 60*Time.deltaTime; // 스폰 시간 증가
+		currentDelayTime += 500*Time.deltaTime; // 스폰 시간 증가
 
 		if (currentDelayTime > spawnList[spawnIndex].delay)
 		{

@@ -13,6 +13,7 @@ public class SpawnPoint60 : MonoBehaviour
 	// 2초에 하나씩 생성 
 
 	public GameObject notePrefab;
+	public GameObject noteParent;
 	public int numberOfNote = 0;
 	public static List<GameObject> note = new List<GameObject>();
 
@@ -24,7 +25,7 @@ public class SpawnPoint60 : MonoBehaviour
 		for(int i = 0; i< numberOfNote; i++ )
 		{
 			note.Add(Instantiate(notePrefab));
-			note[i].transform.SetParent(gameObject.transform);
+			note[i].transform.SetParent(noteParent.transform);
 			note[i].SetActive(false);
 		}
 	}

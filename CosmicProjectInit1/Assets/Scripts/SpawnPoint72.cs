@@ -10,6 +10,7 @@ public class SpawnPoint72 : MonoBehaviour
 	//72가 2초 지속 8초주기
 
 	public GameObject notePrefab;
+	public GameObject noteParent;
 	public int numberOfNote = 0;
 	public static List<GameObject> note = new List<GameObject>();
 
@@ -22,7 +23,7 @@ public class SpawnPoint72 : MonoBehaviour
 		for (int i = 0; i < numberOfNote; i++)
 		{
 			note.Add(Instantiate(notePrefab));
-			note[i].transform.SetParent(gameObject.transform);
+			note[i].transform.SetParent(noteParent.transform);
 			note[i].SetActive(false);
 		}
 	}

@@ -152,6 +152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoint60: {fileID: 1322591515}
   spawnPoint72: {fileID: 989984286}
+  boxDelayTime: 0
 --- !u!4 &274665733
 Transform:
   m_ObjectHideFlags: 0
@@ -337,7 +338,7 @@ MonoBehaviour:
   numberOfNote: 30
   delayTime: 8
   rematinTime: 2
-  makeDelayTime: 0.8
+  makeDelayTime: 0.12
 --- !u!1 &1322591515
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,7 +374,7 @@ MonoBehaviour:
   numberOfNote: 30
   delayTime: 2
   rematinTime: 2
-  makeDelayTime: 0.8
+  makeDelayTime: 0.12
 --- !u!4 &1322591517
 Transform:
   m_ObjectHideFlags: 0

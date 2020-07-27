@@ -8,9 +8,10 @@ public class ReadSignal : MonoBehaviour
 	public List<Spawn> spawnList;
 	public GameObject spawnPoint60;
 	public GameObject spawnPoint72;
-
+	public float boxDelayTime;
 	int spawnIndex;
 	float currentDelayTime;
+
 
 	private void Start()
 	{
@@ -52,9 +53,9 @@ public class ReadSignal : MonoBehaviour
 
 	private void Update()
 	{
-		currentDelayTime += Time.deltaTime; // 스폰 시간 증가
+		currentDelayTime += Time.deltaTime ; // 스폰 시간 증가
 
-		if (currentDelayTime > spawnList[spawnIndex].delay)
+		if (currentDelayTime - boxDelayTime > spawnList[spawnIndex].delay)
 		{
 			SpawnManage();
 		}

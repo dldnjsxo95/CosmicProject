@@ -337,7 +337,7 @@ MonoBehaviour:
   numberOfNote: 30
   delayTime: 8
   rematinTime: 2
-  makeDelayTime: 0.12
+  makeDelayTime: 0.8
 --- !u!1 &1322591515
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,7 +373,7 @@ MonoBehaviour:
   numberOfNote: 30
   delayTime: 2
   rematinTime: 2
-  makeDelayTime: 0.12
+  makeDelayTime: 0.8
 --- !u!4 &1322591517
 Transform:
   m_ObjectHideFlags: 0
@@ -428,7 +428,7 @@ PrefabInstance:
     - target: {fileID: 4850395668913516065, guid: cb5086b6430285d488031b6811c9dddf,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4850395668913516069, guid: cb5086b6430285d488031b6811c9dddf,
         type: 3}

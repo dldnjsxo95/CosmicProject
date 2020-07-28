@@ -46,7 +46,7 @@ public class SpawnPoint60 : MonoBehaviour
             note[0].SetActive(true);
             note.RemoveAt(0);
 
-            yield return null;
+            yield return new WaitForSeconds(makeDelayTime);
         }
     }
 

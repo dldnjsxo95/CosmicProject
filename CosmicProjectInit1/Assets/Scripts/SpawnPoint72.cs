@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices.WindowsRuntime;
+using UnityEditor;
 using UnityEngine;
 
 public class SpawnPoint72 : MonoBehaviour
@@ -42,7 +43,7 @@ public class SpawnPoint72 : MonoBehaviour
             note[0].SetActive(true);
             note.RemoveAt(0);
 
-            yield return null;
+            yield return new WaitForSeconds(makeDelayTime);
 
         }
     }

@@ -338,7 +338,7 @@ MonoBehaviour:
   numberOfNote: 100
   delayTime: 8
   rematinTime: 2
-  makeDelayTime: 0.5
+  makeDelayTime: 0.12
 --- !u!1 &1322591515
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,7 +374,7 @@ MonoBehaviour:
   numberOfNote: 100
   delayTime: 2
   rematinTime: 2
-  makeDelayTime: 0.5
+  makeDelayTime: 0.12
 --- !u!4 &1322591517
 Transform:
   m_ObjectHideFlags: 0
@@ -577,7 +577,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 4e5f48c03e329f34b90fd2ac7e7ef651, type: 3}
+      objectReference: {fileID: 8300000, guid: 0994ebb45bdc4ed40b926a9188f43fef, type: 3}
     m_RemovedComponents:
     - {fileID: 4850395669972240987, guid: cb5086b6430285d488031b6811c9dddf, type: 3}
     - {fileID: 4850395670090818252, guid: cb5086b6430285d488031b6811c9dddf, type: 3}

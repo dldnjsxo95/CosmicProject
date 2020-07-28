@@ -454,6 +454,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  missileFactory: {fileID: 0}
+  firePosition: {fileID: 0}
 --- !u!1001 &4850395669711482610
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -470,6 +472,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 4850395668913516070, guid: cb5086b6430285d488031b6811c9dddf,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4850395668913516071, guid: cb5086b6430285d488031b6811c9dddf,
         type: 3}

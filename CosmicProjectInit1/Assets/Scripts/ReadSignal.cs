@@ -26,7 +26,7 @@ public class ReadSignal : MonoBehaviour
 		spawnIndex = 0;
 
 		// 리스폰 파일 읽기
-		TextAsset textFile = Resources.Load("NeverBeLikeU") as TextAsset;
+		TextAsset textFile = Resources.Load("Test") as TextAsset;
 		StringReader stringReader = new StringReader(textFile.text);
 
 		while (stringReader != null)

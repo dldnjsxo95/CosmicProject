@@ -29,8 +29,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.15094249, y: 0, z: 0}
   m_LocalScale: {x: 0.08159054, y: 1, z: 6.043391}
-  m_Children:
-  - {fileID: 4850395669825837900}
+  m_Children: []
   m_Father: {fileID: 4850395669972240991}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -122,8 +121,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 4850395668913516069}
-  m_RootOrder: 0
+  m_Father: {fileID: 4850395669972240991}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4850395669825837901
 MonoBehaviour:
@@ -171,6 +170,7 @@ Transform:
   m_LocalScale: {x: 12.256323, y: 1, z: 0.16547}
   m_Children:
   - {fileID: 4850395668913516069}
+  - {fileID: 4850395669825837900}
   - {fileID: 4850395670090818254}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -296,7 +296,7 @@ Transform:
   m_LocalScale: {x: 0.22663406, y: 1.230459, z: 2.8347473}
   m_Children: []
   m_Father: {fileID: 4850395669972240991}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 28.278002, y: 0, z: 0}
 --- !u!20 &4850395670090818226
 Camera:
@@ -363,7 +363,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoint60: {fileID: 0}
   spawnPoint72: {fileID: 0}
-  boxDelayTime: 0
 --- !u!82 &4850395670090818255
 AudioSource:
   m_ObjectHideFlags: 0

@@ -57,7 +57,8 @@ public class ReadSignal : MonoBehaviour
 		if (currentDelayTime > spawnList[spawnIndex].delay + boxDelayTime)
 		{
 			print(currentDelayTime);
-			boxDelayTime += 0.01f;
+			boxDelayTime += 0;
+			
 			SpawnManage();
 		}
 	}

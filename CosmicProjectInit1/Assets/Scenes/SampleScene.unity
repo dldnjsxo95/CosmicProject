@@ -335,10 +335,10 @@ MonoBehaviour:
   notePrefab: {fileID: 5191177546102580108, guid: 6091259e8c690b24696c85aa96cf2be6,
     type: 3}
   noteParent: {fileID: 1962382395}
-  numberOfNote: 30
+  numberOfNote: 100
   delayTime: 8
   rematinTime: 2
-  makeDelayTime: 0.12
+  makeDelayTime: 0.5
 --- !u!1 &1322591515
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,10 +371,10 @@ MonoBehaviour:
   notePrefab: {fileID: 1684819872790391486, guid: 82c39787fc8f72d48bbe9a57a497bc84,
     type: 3}
   noteParent: {fileID: 707063327}
-  numberOfNote: 30
+  numberOfNote: 100
   delayTime: 2
   rematinTime: 2
-  makeDelayTime: 0.12
+  makeDelayTime: 0.5
 --- !u!4 &1322591517
 Transform:
   m_ObjectHideFlags: 0
@@ -580,4 +580,5 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 4e5f48c03e329f34b90fd2ac7e7ef651, type: 3}
     m_RemovedComponents:
     - {fileID: 4850395669972240987, guid: cb5086b6430285d488031b6811c9dddf, type: 3}
+    - {fileID: 4850395670090818252, guid: cb5086b6430285d488031b6811c9dddf, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cb5086b6430285d488031b6811c9dddf, type: 3}

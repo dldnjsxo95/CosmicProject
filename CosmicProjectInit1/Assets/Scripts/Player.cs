@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    // 플레이어를 이동시키고싶다
-    public float speed = 5;
-    Renderer playerColor;
+    public float speed = 5; //속도
+    Renderer playerColor; //렌더러속성
+    bool isRed = true; //색 판별
 
     // 미사일 발사하고싶다
     // 필요요소 - rb, 미사일팩토리, 발사하는곳
@@ -22,8 +22,6 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        //Move();
-
         if (Input.GetKeyDown(KeyCode.W))
         {
             ChangeColor();
@@ -58,17 +56,26 @@ public class Player : MonoBehaviour
         this.transform.position = Camera.main.ScreenToWorldPoint(mousePos);
     }
 
+    //색 바꿔주기
     private void ChangeColor()
     {
-        if (playerColor.material.color != Color.red) playerColor.material.color = Color.red;
-        else playerColor.material.color = Color.blue;
+        if (playerColor.material.color != Color.red)
+        {
+            playerColor.material.color = Color.red;
+            isRed = true;
+        }
+        else
+        {
+            playerColor.material.color = Color.blue;
+            isRed = false;
+        }
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Notes")
         {
-            print("123");
+            //print("123");
             other.gameObject.SetActive(false);
 
 

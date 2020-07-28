@@ -73,12 +73,14 @@ public class Player : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Notes")
+        if (other.gameObject.tag == "RedNotes")
         {
-            //print("123");
-            other.gameObject.SetActive(false);
+            if (isRed)  other.gameObject.SetActive(false);
+        }
 
-
+        if (other.gameObject.tag == "BlueNotes")
+        {
+            if (!isRed)  other.gameObject.SetActive(false);
         }
     }
 

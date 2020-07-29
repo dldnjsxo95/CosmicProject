@@ -5,10 +5,10 @@ using UnityEngine;
 public class Note72 : MonoBehaviour
 {
     public float speed;
-
+    Player player;
     void Start()
     {
-
+        player = GetComponent<Player>();
     }
 
     void Update()
@@ -23,6 +23,7 @@ public class Note72 : MonoBehaviour
 			SpawnPoint72.note.Add(gameObject);
 			gameObject.SetActive(false);
 		}
+
 	}
 
 }

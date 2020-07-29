@@ -8,46 +8,53 @@ public class Player : MonoBehaviour
     public float speed = 5; //속도
     Renderer playerColor; //렌더러속성
     bool isRed = true; //색 판별
+    public GameObject blade; //블레이드
+    public GameObject bladeShape; //블레이드 가시성을 위한 형체
 
     // 미사일 발사하고싶다
     // 필요요소 - rb, 미사일팩토리, 발사하는곳
-    public GameObject missileFactory;
-    public Transform firePosition;
+    //public GameObject missileFactory;
+    //public Transform firePosition;
     
 
     void Start()
     {
         playerColor = gameObject.GetComponent<Renderer>();
+        blade.SetActive(false);
+        bladeShape.SetActive(false);
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W))
+        //A키를 누르면 플레이어 색 변경
+        if (Input.GetKeyDown(KeyCode.A))
         {
             ChangeColor();
         }
 
-        // 스페이스바 누르면
-        if (Input.GetKeyDown(KeyCode.Space))
+        //S키를 누르는 동안에만 블레이드 활성화
+        if (Input.GetKey(KeyCode.S))
         {
-            print("Bar");
-            // 미사일 만들어서
-            GameObject missile = Instantiate(missileFactory);
-            // 발사위치에 가져다 놓고싶다.
-            missile.transform.position = firePosition.position;
-
+            blade.SetActive(true);
+            bladeShape.SetActive(true);
+        }
+        else
+        {
+            blade.SetActive(false);
+            bladeShape.SetActive(false);
         }
 
+        //// 스페이스바 누르면
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    print("Bar");
+        //    // 미사일 만들어서
+        //    GameObject missile = Instantiate(missileFactory);
+        //    // 발사위치에 가져다 놓고싶다.
+        //    missile.transform.position = firePosition.position;
+
+        //}
     }
-
-    //private void Move()
-    //{
-    //    float h = Input.GetAxis("Horizontal");
-    //    Vector3 dir = new Vector3(h, 0, 0);
-    //    dir.Normalize();
-
-    //    transform.position += dir * speed * Time.deltaTime;
-    //}
 
     //마우스 드래그에 따라 움직이는 플레이어 객체
     private void OnMouseDrag()
@@ -83,14 +90,4 @@ public class Player : MonoBehaviour
             if (!isRed)  other.gameObject.SetActive(false);
         }
     }
-
-    //void OnCollisionEnter(Collision other)
-    //{
-    //    if (other.gameObject.tag == "Notes")
-    //    {
-    //        print("123");
-    //        other.gameObject.SetActive(false);
-
-    //    }
-    //}
 }

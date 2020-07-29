@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 3642542567605257106}
   - component: {fileID: -1563709384464087410}
   - component: {fileID: -2182858937483036643}
-  - component: {fileID: -7029224238890724144}
   m_Layer: 0
   m_Name: 60
   m_TagString: BlueNotes
@@ -129,16 +128,3 @@ MonoBehaviour:
   destPos: {fileID: 0}
   barTime: 1
   speed: 10
---- !u!114 &-7029224238890724144
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1684819872790391486}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76f9eee7e40d316419e4d836839c4c58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  capMaterial: {fileID: 0}

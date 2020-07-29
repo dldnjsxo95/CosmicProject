@@ -31,7 +31,7 @@ public class Note60 : MonoBehaviour
 
 	private void OnTriggerEnter(Collider other)
 	{
-		if (other.gameObject.name.Contains("Standardline"))
+		if (other.gameObject.name.Contains("DestroyLine"))
 		{
 			SpawnPoint60.note.Add(gameObject);
 			gameObject.SetActive(false);

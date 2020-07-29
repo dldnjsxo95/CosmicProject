@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MeshCut : MonoBehaviour
+public class MeshCutOur : MonoBehaviour
 {
 
 	public Material capMaterial;
@@ -16,7 +16,7 @@ public class MeshCut : MonoBehaviour
 	void Update()
 	{
 
-		if (Input.GetMouseButtonDown(0))
+		if (Input.GetKey(KeyCode.S))
 		{
 			RaycastHit hit;
 
@@ -29,8 +29,14 @@ public class MeshCut : MonoBehaviour
 
 				if (!pieces[1].GetComponent<Rigidbody>())
 					pieces[1].AddComponent<Rigidbody>();
+				if (!pieces[0].GetComponent<Rigidbody>())
+					pieces[0].AddComponent<Rigidbody>();
 
-				Destroy(pieces[1], 1);
+				pieces[1].GetComponent<Rigidbody>().AddForce(Vector3.right*5, ForceMode.Impulse);
+				pieces[0].GetComponent<Rigidbody>().AddForce(Vector3.right * (-5), ForceMode.Impulse);
+
+				Destroy(pieces[1], 2);
+				Destroy(pieces[0], 2);
 			}
 
 		}

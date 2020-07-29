@@ -26,7 +26,7 @@ public class ReadSignal : MonoBehaviour
 		spawnIndex = 0;
 
 		// 리스폰 파일 읽기
-		TextAsset textFile = Resources.Load("TestText") as TextAsset;
+		TextAsset textFile = Resources.Load("NeverBeLikeU") as TextAsset;
 		StringReader stringReader = new StringReader(textFile.text);
 
 		while (stringReader != null)
@@ -52,12 +52,13 @@ public class ReadSignal : MonoBehaviour
 
 	private void Update()
 	{
-		currentDelayTime += Time.deltaTime ; // 스폰 시간 증가
+		currentDelayTime += (1 - 0.04f) * Time.deltaTime; // 스폰 시간 증가
 
 		if (currentDelayTime > spawnList[spawnIndex].delay + boxDelayTime)
 		{
 			print(currentDelayTime);
-			boxDelayTime += 0.01f;
+			boxDelayTime += 0;
+
 			SpawnManage();
 		}
 	}
@@ -66,7 +67,7 @@ public class ReadSignal : MonoBehaviour
 	{
 		int setSpawn = 0;
 
-		switch(spawnList[spawnIndex].OnOff)
+		switch (spawnList[spawnIndex].OnOff)
 		{
 			case "On":
 				setSpawn = 1;
@@ -91,7 +92,7 @@ public class ReadSignal : MonoBehaviour
 		}
 
 		spawnIndex++;
-		
+
 	}
 
 }

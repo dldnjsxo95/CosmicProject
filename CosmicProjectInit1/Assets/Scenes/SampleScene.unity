@@ -211,7 +211,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4b240a0e4186714cb42c7447ca9227f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  capMaterial: {fileID: 2100000, guid: 97caa04e2e4198b4d81f0e0ca1828147, type: 2}
+  capMaterial60: {fileID: 2100000, guid: 97caa04e2e4198b4d81f0e0ca1828147, type: 2}
+  capMaterial72: {fileID: 2100000, guid: 52ab7df92f94bad439136701ebe4c1cd, type: 2}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,9 +384,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82d6a14a13ff4224eb563e76761d84e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
   blade: {fileID: 532795391}
   bladeShape: {fileID: 1018269770}
+  note60: {fileID: 1684819872790391486, guid: 82c39787fc8f72d48bbe9a57a497bc84, type: 3}
+  note72: {fileID: 5191177546102580108, guid: 6091259e8c690b24696c85aa96cf2be6, type: 3}
 --- !u!54 &722105992
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -518,7 +520,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 969481942}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -659,7 +661,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 8479064328ac94043a5432f54b89a616, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float speed = 5; //속도
+    //public float speed = 5; //속도
     Renderer playerColor; //렌더러속성
-    bool isRed = true; //색 판별
+    public static bool isRed = true; //색 판별
     public GameObject blade; //블레이드
     public GameObject bladeShape; //블레이드 가시성을 위한 형체
 
@@ -82,12 +82,20 @@ public class Player : MonoBehaviour
     {
         if (other.gameObject.tag == "RedNotes")
         {
-            if (isRed)  other.gameObject.SetActive(false);
+            if (isRed)
+            {
+                SpawnPoint72.note.Add(other.gameObject);
+                other.gameObject.SetActive(false);
+            }
         }
 
         if (other.gameObject.tag == "BlueNotes")
         {
-            if (!isRed)  other.gameObject.SetActive(false);
+            if (!isRed)
+            {
+                SpawnPoint60.note.Add(other.gameObject);
+                other.gameObject.SetActive(false);
+            }
         }
     }
 }

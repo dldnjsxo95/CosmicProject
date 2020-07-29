@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float speed = 5; //속도
+    //public float speed = 5; //속도
     Renderer playerColor; //렌더러속성
     bool isRed = true; //색 판별
     public GameObject blade; //블레이드

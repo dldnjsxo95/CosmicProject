@@ -54,7 +54,7 @@ public class ReadSignal : MonoBehaviour
     {
         currentDelayTime += (1 - 0.04f) * Time.deltaTime; // 스폰 시간 증가
 
-        if (spawnIndex < spawnList.Count)
+        if (spawnIndex < spawnList.Count) // 배열의 모든 값이 출력 되고 나면 나오지 않도록 하기 위해 
         {
             if (currentDelayTime > spawnList[spawnIndex].delay + boxDelayTime)
             {

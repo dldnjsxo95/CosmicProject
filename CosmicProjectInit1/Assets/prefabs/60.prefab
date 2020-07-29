@@ -123,8 +123,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55b0727e1c07c4e40bdfd8e3b3345c68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  instancePos: {fileID: 3431962226186190216, guid: 29f3f65eb7487cb4f8be68b72f6bff5c,
-    type: 3}
   destPos: {fileID: 0}
-  barTime: 1
-  speed: 10
+  delayTime: 2

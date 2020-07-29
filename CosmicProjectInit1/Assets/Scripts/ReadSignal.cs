@@ -56,7 +56,7 @@ public class ReadSignal : MonoBehaviour
 
         if (spawnIndex < spawnList.Count) // 배열의 모든 값이 출력 되고 나면 나오지 않도록 하기 위해 
         {
-            if (currentDelayTime > spawnList[spawnIndex].delay + boxDelayTime)
+            if (currentDelayTime > spawnList[spawnIndex].delay - boxDelayTime)
             {
                 print(currentDelayTime);
                 boxDelayTime += 0;

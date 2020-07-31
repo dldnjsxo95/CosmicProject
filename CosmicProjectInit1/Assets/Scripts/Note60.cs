@@ -25,17 +25,6 @@ public class Note60 : MonoBehaviour
     {
 
         transform.position += dir.normalized * speed * Time.deltaTime;
-
-
-        // 생성된 위치부터 목표 위치까지 barTime동안 가고싶다.
-        //transform.position = Vector3.Lerp(transform.position, destPos.transform.position, Time.deltaTime );
-
-        // 목표를 보고싶다.
-        //transform.localRotation = Quaternion.Lerp(GetComponentInParent<Transform>().transform.rotation, destPos.transform.rotation, Time.time * speed);
-        //GetComponentInParent<Transform>().transform.rotation = Quaternion.Lerp(GetComponentInParent<Transform>().transform.rotation, Quaternion.LookRotation(destPos.transform.position - transform.position.normalized),
-        //          200 * Time.deltaTime);
-
-
     }
 
     private void OnTriggerEnter(Collider other)

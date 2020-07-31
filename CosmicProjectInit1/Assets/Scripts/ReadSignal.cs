@@ -27,12 +27,13 @@ public class ReadSignal : MonoBehaviour
 		spawnIndex = 0;
 
 		// 리스폰 파일 읽기
-		TextAsset textFile = Resources.Load("NeverBeLikeUFull") as TextAsset;
+		TextAsset textFile = Resources.Load("dontstartnowFull") as TextAsset;
 		StringReader stringReader = new StringReader(textFile.text);
 
+		// 글자 배열이 없을때까지
 		while (stringReader != null)
 		{
-			string line = stringReader.ReadLine();
+			string line = stringReader.ReadLine(); //텍스트의 내용을 한줄씩 읽어 온다.
 			if (line == null)
 				break;
 
@@ -57,12 +58,11 @@ public class ReadSignal : MonoBehaviour
 
 		if (spawnIndex < spawnList.Count) // 배열의 모든 값이 출력 되고 나면 나오지 않도록 하기 위해 
 		{
+			// 만약 현재 시간이 텍스트에 적혀있는 시간보다 크다면 , boxDelay = 박스가 생성되서 도착지점까지 걸리는 시간.
 			if (currentDelayTime > spawnList[spawnIndex].delay - boxDelayTime)
 			{
 				print(currentDelayTime);
-				boxDelayTime += 0;
-
-				SpawnManage();
+				SpawnManage(); // SpawnManager 실행
 			}
 		}
 	}
@@ -71,6 +71,7 @@ public class ReadSignal : MonoBehaviour
 	{
 		int setSpawn = 0;
 
+		//스위치 문을 통해 OnOff 상태확인
 		switch (spawnList[spawnIndex].OnOff)
 		{
 			case "On":
@@ -81,11 +82,11 @@ public class ReadSignal : MonoBehaviour
 				break;
 		}
 
-
+		// 만약 스폰 위치가 60이라면
 		if (spawnList[spawnIndex].location == 60 && spawnPoint60 != null)
 		{
-			if (setSpawn == 1) spawnPoint60.SetActive(true);
-			if (setSpawn == 2) spawnPoint60.SetActive(false);
+			if (setSpawn == 1) spawnPoint60.SetActive(true); //On 이라면 켜주고
+			if (setSpawn == 2) spawnPoint60.SetActive(false); //Off 라면 꺼준다.
 		}
 
 
@@ -101,7 +102,7 @@ public class ReadSignal : MonoBehaviour
 			if (setSpawn == 2) spawnPoint84.SetActive(false);
 		}
 
-		spawnIndex++;
+		spawnIndex++; //그 다음 줄로 이동한다.
 
 	}
 

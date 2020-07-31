@@ -44,16 +44,6 @@ public class Player : MonoBehaviour
             bladeShape.SetActive(false);
         }
 
-        //// 스페이스바 누르면
-        //if (Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    print("Bar");
-        //    // 미사일 만들어서
-        //    GameObject missile = Instantiate(missileFactory);
-        //    // 발사위치에 가져다 놓고싶다.
-        //    missile.transform.position = firePosition.position;
-
-        //}
     }
 
     //마우스 드래그에 따라 움직이는 플레이어 객체

@@ -2034,8 +2034,6 @@ MonoBehaviour:
     type: 3}
   noteParent: {fileID: 707063327}
   numberOfNote: 30
-  delayTime: 2
-  rematinTime: 2
   makeDelayTime: 0.12
 --- !u!4 &1322591517
 Transform:
@@ -2482,7 +2480,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 0994ebb45bdc4ed40b926a9188f43fef, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 433c35681a9a4714b8ba663f7a327380, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

@@ -61,7 +61,6 @@ public class ReadSignal : MonoBehaviour
 			// 만약 현재 시간이 텍스트에 적혀있는 시간보다 크다면 , boxDelay = 박스가 생성되서 도착지점까지 걸리는 시간.
 			if (currentDelayTime > spawnList[spawnIndex].delay - boxDelayTime)
 			{
-				print(currentDelayTime);
 				SpawnManage(); // SpawnManager 실행
 			}
 		}

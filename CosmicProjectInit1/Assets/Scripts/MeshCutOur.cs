@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Networking;
 
 public class MeshCutOur : MonoBehaviour
 {
-
-	public Material capMaterial60;
-	public Material capMaterial72;
-
+	public Material capMaterial84;
+	public GameObject clone;
+	
 	// Use this for initialization
 	void Start()
 	{
@@ -23,26 +23,22 @@ public class MeshCutOur : MonoBehaviour
 
 			if (Physics.Raycast(transform.position, transform.forward, out hit))
 			{
+				if (hit.collider.name.Contains("84Clone"))
+				{
 
-				GameObject victim = hit.collider.gameObject;
+					Destroy(hit.collider, 3);
+					GameObject victim = hit.collider.gameObject;
+					GameObject[] pieces84 = BLINDED_AM_ME.MeshCut.Cut(victim, transform.position, transform.right, capMaterial84);
+					if (!pieces84[1].GetComponent<Rigidbody>()) pieces84[1].AddComponent<Rigidbody>();
+					if (!pieces84[0].GetComponent<Rigidbody>()) pieces84[0].AddComponent<Rigidbody>();
+					pieces84[1].GetComponent<Rigidbody>().AddForce(Vector3.Cross(-hit.normal,(pieces84[1].transform.position-hit.point).normalized) * (-50), ForceMode.Impulse);// 숫자를 오른 손일때와 왼속일때 반대로 넣으면 됨
+					pieces84[0].GetComponent<Rigidbody>().AddForce(Vector3.Cross(-hit.normal, (pieces84[0].transform.position - hit.point).normalized) * (50), ForceMode.Impulse);
+					print("p1 : " + pieces84[1].transform.position);
+					print("p0 : " + pieces84[0].transform.position);
+					Destroy(pieces84[1], 1);
+					Destroy(pieces84[0], 1);	
+				}
 
-				GameObject[] pieces60 = BLINDED_AM_ME.MeshCut.Cut(victim, transform.position, transform.right, capMaterial60);
-				GameObject[] pieces72 = BLINDED_AM_ME.MeshCut.Cut(victim, transform.position, transform.right, capMaterial72);
-
-				if (!pieces60[1].GetComponent<Rigidbody>())  pieces60[1].AddComponent<Rigidbody>();
-				if (!pieces60[0].GetComponent<Rigidbody>())  pieces60[0].AddComponent<Rigidbody>();
-				if (!pieces72[1].GetComponent<Rigidbody>())  pieces72[1].AddComponent<Rigidbody>();
-				if (!pieces72[0].GetComponent<Rigidbody>())  pieces72[0].AddComponent<Rigidbody>();
-
-				pieces60[1].GetComponent<Rigidbody>().AddForce(Vector3.right * 5, ForceMode.Impulse);
-				pieces60[0].GetComponent<Rigidbody>().AddForce(Vector3.right * (-5), ForceMode.Impulse);
-				pieces72[1].GetComponent<Rigidbody>().AddForce(Vector3.right * 5, ForceMode.Impulse);
-				pieces72[0].GetComponent<Rigidbody>().AddForce(Vector3.right * (-5), ForceMode.Impulse);
-
-				Destroy(pieces60[1], 1);
-				Destroy(pieces60[0], 1);
-				Destroy(pieces72[1], 1);
-				Destroy(pieces72[0], 1);
 			}
 
 		}

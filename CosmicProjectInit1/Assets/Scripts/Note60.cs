@@ -34,6 +34,13 @@ public class Note60 : MonoBehaviour
             SpawnPoint60.note.Add(gameObject); // 해당 노트를 추가 해준다
             gameObject.SetActive(false);// 해당 노트의 상태를 false로 만들어준다.
         }
+
+        if(other.gameObject.tag == "Player" && Player.COLOR ==Player.State.Blue)
+		{
+            SpawnPoint60.note.Add(gameObject);
+            gameObject.SetActive(false);
+        }
+
     }
 
 }

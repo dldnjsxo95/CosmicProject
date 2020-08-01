@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Permissions;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -10,15 +11,30 @@ public class Player : MonoBehaviour
 	public static bool isRed = true; //색 판별
 	public GameObject blade; //블레이드
 	public GameObject bladeShape; //블레이드 가시성을 위한 형체
-
+	float colorValue;
 	// 미사일 발사하고싶다
 	// 필요요소 - rb, 미사일팩토리, 발사하는곳
 	//public GameObject missileFactory;
 	//public Transform firePosition;
 
+	public enum State
+	{
+		Red,
+		Blue,
+	}
+	public static State color;
+
+	public static State COLOR
+	{
+		get { return color; }
+		set { color = value; }
+	}
+
+
 
 	void Start()
 	{
+		color = State.Red;
 		playerColor = gameObject.GetComponent<Renderer>();
 		blade.SetActive(false);
 		bladeShape.SetActive(false);
@@ -59,33 +75,33 @@ public class Player : MonoBehaviour
 		if (playerColor.material.color != Color.red)
 		{
 			playerColor.material.color = Color.red;
-			isRed = true;
+			COLOR = State.Red;
 		}
 		else
 		{
 			playerColor.material.color = Color.blue;
-			isRed = false;
+			COLOR = State.Blue;
 		}
 	}
 
-	void OnTriggerEnter(Collider other)
-	{
-		if (other.gameObject.tag == "RedNotes"  )
-		{
-			if (isRed)
-			{
-				SpawnPoint72.note.Add(other.gameObject);
-				other.gameObject.SetActive(false);
-			}
-		}
+	//void OnTriggerEnter(Collider other)
+	//{
+	//	if (other.gameObject.tag == "RedNotes"  )
+	//	{
+	//		if (isRed)
+	//		{
+	//			SpawnPoint72.note.Add(other.gameObject);
+	//			other.gameObject.SetActive(false);
+	//		}
+	//	}
 
-		if (other.gameObject.tag == "BlueNotes" )
-		{
-			if (!isRed)
-			{
-				SpawnPoint60.note.Add(other.gameObject);
-				other.gameObject.SetActive(false);
-			}
-		}
-	}
+	//	if (other.gameObject.tag == "BlueNotes" )
+	//	{
+	//		if (!isRed)
+	//		{
+	//			SpawnPoint60.note.Add(other.gameObject);
+	//			other.gameObject.SetActive(false);
+	//		}
+	//	}
+	//}
 }

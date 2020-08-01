@@ -35,6 +35,12 @@ public class Note72 : MonoBehaviour
             SpawnPoint72.note.Add(gameObject);
             gameObject.SetActive(false);
         }
+
+        if (other.gameObject.tag == "Player" && Player.COLOR == Player.State.Red)
+        {
+            SpawnPoint72.note.Add(gameObject);
+            gameObject.SetActive(false);
+        }
     }
 
 }

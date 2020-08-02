@@ -51,7 +51,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5191177546102580108}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -222,6 +222,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Parameters.colorGradient.key1.b
       value: 0.20392159
+      objectReference: {fileID: 0}
+    - target: {fileID: 114247902749507910, guid: 7498c3226cdb7df49856fae2f922c58c,
+        type: 3}
+      propertyPath: randomize
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 212486072480904546, guid: 7498c3226cdb7df49856fae2f922c58c,
         type: 3}

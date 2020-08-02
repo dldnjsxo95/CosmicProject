@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3642542567605257106}
   - component: {fileID: -1563709384464087410}
   - component: {fileID: -2182858937483036643}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 60
   m_TagString: BlueNotes
   m_Icon: {fileID: 0}
@@ -137,9 +137,29 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1267640409265328, guid: 7498c3226cdb7df49856fae2f922c58c, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1350380851333968, guid: 7498c3226cdb7df49856fae2f922c58c, type: 3}
       propertyPath: m_Name
       value: Comet
+      objectReference: {fileID: 0}
+    - target: {fileID: 1350380851333968, guid: 7498c3226cdb7df49856fae2f922c58c, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1350380851333968, guid: 7498c3226cdb7df49856fae2f922c58c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1375161233652552, guid: 7498c3226cdb7df49856fae2f922c58c, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1656499582812444, guid: 7498c3226cdb7df49856fae2f922c58c, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4637514431325516, guid: 7498c3226cdb7df49856fae2f922c58c, type: 3}
       propertyPath: m_LocalPosition.x

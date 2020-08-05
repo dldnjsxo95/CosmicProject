@@ -7,7 +7,8 @@ public class Note72 : MonoBehaviour
 {
     // 생성된 위치부터 목표 위치까지 ~~시간동안 가고싶다.
     // 생성되는 위치, 목표 위치, ~~시간
-    public GameObject destPos;
+    GameObject destPos;
+    public GameObject particle;
     public float delayTime;
     float speed;
     Vector3 dir;
@@ -39,6 +40,9 @@ public class Note72 : MonoBehaviour
         if (other.gameObject.tag == "Player" && Player.COLOR == Player.State.Red)
         {
             SpawnPoint72.note.Add(gameObject);
+            GameObject par = Instantiate(particle);
+            par.transform.position = transform.position;
+            par.transform.forward = -dir;
             gameObject.SetActive(false);
         }
     }

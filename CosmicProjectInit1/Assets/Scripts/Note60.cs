@@ -7,11 +7,12 @@ public class Note60 : MonoBehaviour
 {
     // 생성된 위치부터 목표 위치까지 ~~시간동안 가고싶다.
     // 생성되는 위치, 목표 위치, ~~시간
-    public GameObject destPos; // 도착 위치
+    GameObject destPos; // 도착 위치
     public float delayTime; // 도착지점 까지 걸리는 시간
     float speed; // 박스의 움직이는 속도
     Vector3 dir; // 움직이는 방향
 
+    public GameObject particle;
     private void OnEnable()
     {
         destPos = GameObject.Find("Destination60"); // 목적지를 찾는다.
@@ -38,6 +39,9 @@ public class Note60 : MonoBehaviour
         if(other.gameObject.tag == "Player" && Player.COLOR ==Player.State.Blue)
 		{
             SpawnPoint60.note.Add(gameObject);
+            GameObject par = Instantiate(particle);
+            par.transform.position = transform.position;
+            par.transform.forward = -dir;
             gameObject.SetActive(false);
         }
 

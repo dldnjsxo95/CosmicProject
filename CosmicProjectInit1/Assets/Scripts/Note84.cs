@@ -8,7 +8,7 @@ public class Note84 : MonoBehaviour
 	// 생성된 위치부터 목표 위치까지 ~~시간동안 가고싶다.
 	// 생성되는 위치, 목표 위치, ~~시간
 	public GameObject clonePref;
-	public GameObject destPos;
+	GameObject destPos;
 	public float delayTime;
 	float speed;
 	Vector3 dir;

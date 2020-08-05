@@ -34,7 +34,7 @@ public class ReadSignal : MonoBehaviour
 		spawnIndex = 0;
 
 		// 리스폰 파일 읽기
-		TextAsset textFile = Resources.Load("Older") as TextAsset;
+		TextAsset textFile = Resources.Load("NeverBeLikeUFull") as TextAsset;
 		StringReader stringReader = new StringReader(textFile.text);
 
 		// 글자 배열이 없을때까지

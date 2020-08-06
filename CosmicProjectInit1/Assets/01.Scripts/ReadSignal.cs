@@ -19,13 +19,32 @@ public class ReadSignal : MonoBehaviour
 
 	int spawnIndex;
 	float currentDelayTime;
-
-
-	private void Start()
+	string musicName;
+	private void OnEnable()
 	{
 		spawnList = new List<Spawn>();
+
+		if(MusicManager.MUSIC == MusicManager.Music.DontStartNow)
+		{
+			DontStartNow.Instance.audioSource.Play();
+			musicName = "dontstartnowFull";
+		}
+
+		if (MusicManager.MUSIC == MusicManager.Music.NeverBeLikeU)
+		{
+			NeverBeLikeU.Instance.audioSource.Play();
+			musicName = "NeverBeLikeUFull";
+		}
+
+		if (MusicManager.MUSIC == MusicManager.Music.Older)
+		{
+			Older.Instance.audioSource.Play();
+			musicName = "Older";
+		}
+
 		ReadSpawnFile();
 	}
+
 
 	void ReadSpawnFile()
 	{
@@ -34,7 +53,7 @@ public class ReadSignal : MonoBehaviour
 		spawnIndex = 0;
 
 		// 리스폰 파일 읽기
-		TextAsset textFile = Resources.Load("NeverBeLikeUFull") as TextAsset;
+		TextAsset textFile = Resources.Load(musicName) as TextAsset;
 		StringReader stringReader = new StringReader(textFile.text);
 
 		// 글자 배열이 없을때까지

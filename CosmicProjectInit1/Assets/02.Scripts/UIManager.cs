@@ -47,6 +47,8 @@ public class UIManager : MonoBehaviour
         {
             case UIState.start:
                 start.enabled = true;
+                howToPlay.enabled = false;
+                select.enabled = false;
                 break;
 
             case UIState.howToPlay:
@@ -56,13 +58,14 @@ public class UIManager : MonoBehaviour
 
             case UIState.select:
                 start.enabled = false;
+                howToPlay.enabled = false;
                 select.enabled = true;
                 break;
 
             case UIState.onPlay:
                 select.enabled = false;
                 onPlay.enabled = true;
-                combo.text = "Combo";
+                combo.text = "0";
                 break;
 
             case UIState.result:

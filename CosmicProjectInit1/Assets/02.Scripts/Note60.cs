@@ -43,8 +43,21 @@ public class Note60 : MonoBehaviour
             par.transform.position = transform.position;
             par.transform.forward = -dir;
             gameObject.SetActive(false);
+
+
+
+            GameObject sideBar = GameObject.Find("SideBar");
+            sideBar.GetComponentInChildren<SideBar1>().SideBar();
+            //sideBar.GetComponentInChildren<SideBar2>().SideBar();
+
         }
 
     }
+
+
+    
+
+    
+
 
 }

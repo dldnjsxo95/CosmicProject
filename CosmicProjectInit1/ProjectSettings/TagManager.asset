@@ -9,6 +9,7 @@ TagManager:
   - BlueNotes
   - Enemy
   - Planeta
+  - SidBar
   layers:
   - Default
   - TransparentFX

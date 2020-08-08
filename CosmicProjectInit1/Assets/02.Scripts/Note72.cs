@@ -44,6 +44,13 @@ public class Note72 : MonoBehaviour
             par.transform.position = transform.position;
             par.transform.forward = -dir;
             gameObject.SetActive(false);
+
+            // SideBar 색 바꾸기
+            GameObject sideBarL = GameObject.Find("SideBarL_1");
+            sideBarL.GetComponent<MeshRenderer>().material =  Resources.Load("72") as Material;
+            GameObject sideBarR = GameObject.Find("SideBarR_1");
+            sideBarR.GetComponent<MeshRenderer>().material = Resources.Load("72") as Material;
+
         }
     }
 

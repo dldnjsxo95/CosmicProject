@@ -44,6 +44,34 @@ public class SideBar2 : MonoBehaviour
 
         transform.localPosition = new Vector3(currentPositionX, currentPositionY, currentPositionZ);
 
-        
+    }
+
+    bool isCoroutine = true;
+
+    public void StartCoroutin()
+    {
+        StartCoroutine(SlideShake());
+    }
+
+    IEnumerator SlideShake()
+    {
+        if (isCoroutine)
+        {
+            isCoroutine = !isCoroutine;
+
+            for (int i = 0; i < 4; i++)
+            {
+                currentPositionZ += 1f;
+
+                yield return null;
+
+                currentPositionZ -= 1f;
+
+                yield return null;
+
+            }
+        }
+
+        isCoroutine = !isCoroutine;
     }
 }

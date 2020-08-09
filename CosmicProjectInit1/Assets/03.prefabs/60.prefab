@@ -124,8 +124,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55b0727e1c07c4e40bdfd8e3b3345c68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destPos: {fileID: 0}
   delayTime: 2
+  sideBarLs: {fileID: 0}
+  sidebar: []
   particle: {fileID: 3206359971145652612, guid: f816a78eac4113449b379ad14193f8d4,
     type: 3}
 --- !u!1001 &6480098697811153383

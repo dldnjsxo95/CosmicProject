@@ -12,7 +12,7 @@ public class Note72 : MonoBehaviour
     public float delayTime;
     float speed;
     Vector3 dir;
-
+  
     private void OnEnable()
     {
         destPos = GameObject.Find("Destination72");
@@ -50,6 +50,20 @@ public class Note72 : MonoBehaviour
             sideBarL.GetComponent<MeshRenderer>().material =  Resources.Load("72") as Material;
             GameObject sideBarR = GameObject.Find("SideBarR_1");
             sideBarR.GetComponent<MeshRenderer>().material = Resources.Load("72") as Material;
+            GameObject RParent = GameObject.Find("SideBarR");
+            GameObject LParent = GameObject.Find("SideBarL");
+
+            for (int i = 0; i < RParent.transform.childCount; i++)
+            {
+                if (RParent.transform.GetChild(i).GetComponent<SideBar1>())
+                    RParent.transform.GetChild(i).GetComponent<SideBar1>().StartCoroutin();
+                if (RParent.transform.GetChild(i).GetComponent<SideBar2>())
+                    RParent.transform.GetChild(i).GetComponent<SideBar2>().StartCoroutin();
+                if (LParent.transform.GetChild(i).GetComponent<SideBar1>())
+                    LParent.transform.GetChild(i).GetComponent<SideBar1>().StartCoroutin();
+                if (LParent.transform.GetChild(i).GetComponent<SideBar2>())
+                    LParent.transform.GetChild(i).GetComponent<SideBar2>().StartCoroutin();
+            }
 
         }
     }

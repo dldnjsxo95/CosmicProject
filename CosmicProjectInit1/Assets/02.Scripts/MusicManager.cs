@@ -22,7 +22,6 @@ public class MusicManager : MonoBehaviour
 	}
 	public static Music music;
 	public GameObject ReadSignal;
-	public GameObject SelectUI;
 
 	public static Music MUSIC
 	{
@@ -34,21 +33,21 @@ public class MusicManager : MonoBehaviour
 	{
 		music = Music.DontStartNow;
 		ReadSignal.SetActive(true);
-		SelectUI.SetActive(false);
+        SystemManager.Instance.nowState = SystemManager.State.onPlay;
 	}
 
 	public void Never()
 	{
 		music = Music.NeverBeLikeU;
 		ReadSignal.SetActive(true);
-		SelectUI.SetActive(false);
-	}
+        SystemManager.Instance.nowState = SystemManager.State.onPlay;
+    }
 
 	public void Older()
 	{
 		music = Music.Older;
 		ReadSignal.SetActive(true);
-		SelectUI.SetActive(false);
-	}
+        SystemManager.Instance.nowState = SystemManager.State.onPlay;
+    }
 
 }

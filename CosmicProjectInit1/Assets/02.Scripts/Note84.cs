@@ -37,11 +37,13 @@ public class Note84 : MonoBehaviour
 		{
 			SpawnPoint84.note.Add(gameObject);
 			gameObject.SetActive(false);
-		}
+            UIManager.Instance.combo = 0;
+        }
 
 		if (other.gameObject.name.Contains("(BladeTempShape)"))
 		{
-			GameObject clone = Instantiate(clonePref);
+            UIManager.Instance.combo += 1;
+            GameObject clone = Instantiate(clonePref);
 			clone.transform.position = transform.position;
 			clone.transform.forward = transform.forward;
 			Destroy(clone, 1.2f);

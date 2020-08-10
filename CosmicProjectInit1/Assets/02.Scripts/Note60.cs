@@ -38,11 +38,13 @@ public class Note60 : MonoBehaviour
 		{
 			SpawnPoint60.note.Add(gameObject); // 해당 노트를 추가 해준다
 			gameObject.SetActive(false);// 해당 노트의 상태를 false로 만들어준다.
+            UIManager.Instance.combo = 0;
 		}
 
 		if (other.gameObject.tag == "Player" && Player.COLOR == Player.State.Blue)
 		{
-			SpawnPoint60.note.Add(gameObject);
+            UIManager.Instance.combo += 1;
+            SpawnPoint60.note.Add(gameObject);
 			GameObject par = Instantiate(particle);
 			par.transform.position = transform.position;
 			par.transform.forward = -dir;

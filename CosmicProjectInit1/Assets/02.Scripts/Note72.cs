@@ -35,10 +35,12 @@ public class Note72 : MonoBehaviour
         {
             SpawnPoint72.note.Add(gameObject);
             gameObject.SetActive(false);
+            UIManager.Instance.combo = 0;
         }
 
         if (other.gameObject.tag == "Player" && Player.COLOR == Player.State.Red)
         {
+            UIManager.Instance.combo += 1;
             SpawnPoint72.note.Add(gameObject);
             GameObject par = Instantiate(particle);
             par.transform.position = transform.position;

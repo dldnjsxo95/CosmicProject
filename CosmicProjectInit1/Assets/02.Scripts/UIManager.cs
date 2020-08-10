@@ -18,8 +18,11 @@ public class UIManager : MonoBehaviour
     public Canvas howToPlay;// 게임 방법 상태 UI캔버스
     public Canvas select;   // 음악 선택 상태 UI캔버스(옆에 옵션창도 같이)
     public Canvas onPlay;   // 리듬게임 플레이 상태의 ui 캔버스
-    public Text combo;      // 노트 콤보 수
+    public Text comboTxt;      // UI 중 "combo" 글자
+    public Text comboNum;      // UI 중 콤보 수
     public Canvas result;   // 게임결과 UI캔버스
+
+    public int combo = 0; //콤보수
 
     public enum UIState
     {
@@ -65,7 +68,16 @@ public class UIManager : MonoBehaviour
             case UIState.onPlay:
                 select.enabled = false;
                 onPlay.enabled = true;
-                combo.text = "0";
+                if (combo == 0)
+                {
+                    comboTxt.text = " ";
+                    comboNum.text = " ";
+                }
+                else
+                {
+                    comboTxt.text = "Combo";
+                    comboNum.text = combo.ToString();
+                }
                 break;
 
             case UIState.result:

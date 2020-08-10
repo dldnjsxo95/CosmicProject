@@ -12,10 +12,6 @@ public class Player : MonoBehaviour
 	public GameObject blade; //블레이드
 	public GameObject bladeShape; //블레이드 가시성을 위한 형체
 	float colorValue;
-	// 미사일 발사하고싶다
-	// 필요요소 - rb, 미사일팩토리, 발사하는곳
-	//public GameObject missileFactory;
-	//public Transform firePosition;
 
 	public enum State
 	{
@@ -29,8 +25,6 @@ public class Player : MonoBehaviour
 		get { return color; }
 		set { color = value; }
 	}
-
-
 
 	void Start()
 	{

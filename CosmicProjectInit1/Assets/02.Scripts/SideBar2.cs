@@ -57,15 +57,16 @@ public class SideBar2 : MonoBehaviour
     {
         if (isCoroutine)
         {
+
             isCoroutine = !isCoroutine;
 
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 6; i++)
             {
-                currentPositionZ += 1f;
+                currentPositionZ += 0.5f;
 
                 yield return null;
 
-                currentPositionZ -= 1f;
+                currentPositionZ -= 0.5f;
 
                 yield return null;
 

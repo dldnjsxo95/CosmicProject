@@ -16,6 +16,8 @@ public class ReadSignal : MonoBehaviour
 	public float spawnMaxX72;
 	public float spawnMinX84;
 	public float spawnMaxX84;
+	public float spawnMinY;
+	public float spawnMaxY;
 
 	int spawnIndex;
 	float currentDelayTime;
@@ -87,9 +89,9 @@ public class ReadSignal : MonoBehaviour
 			// 만약 현재 시간이 텍스트에 적혀있는 시간보다 크다면 , boxDelay = 박스가 생성되서 도착지점까지 걸리는 시간.
 			if (currentDelayTime > spawnList[spawnIndex].delay - boxDelayTime)
 			{
-				spawnPoint60.transform.position = new Vector3(Random.Range(spawnMinX60, spawnMaxX60),0,spawnPoint60.transform.position.z); 
-				spawnPoint72.transform.position = new Vector3(Random.Range(spawnMinX72, spawnMaxX72), 0, spawnPoint72.transform.position.z); 
-				spawnPoint84.transform.position = new Vector3(Random.Range(spawnMinX84, spawnMaxX84), 0, spawnPoint84.transform.position.z); 
+				spawnPoint60.transform.position = new Vector3(Random.Range(spawnMinX60, spawnMaxX60), Random.Range(spawnMinY, spawnMaxY), spawnPoint60.transform.position.z); 
+				spawnPoint72.transform.position = new Vector3(Random.Range(spawnMinX72, spawnMaxX72), Random.Range(spawnMinY, spawnMaxY), spawnPoint72.transform.position.z); 
+				spawnPoint84.transform.position = new Vector3(Random.Range(spawnMinX84, spawnMaxX84), Random.Range(spawnMinY, spawnMaxY), spawnPoint84.transform.position.z); 
 
 				SpawnManage(); // SpawnManager 실행
 			}

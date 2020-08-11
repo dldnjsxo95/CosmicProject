@@ -8,7 +8,6 @@ public class LeftHand : MonoBehaviour
 {
 	//public float speed = 5; //속도
 	Renderer playerColor; //렌더러속성
-	public static bool isRed = true; //색 판별
 	public GameObject blade; //블레이드
 	public GameObject bladeShape; //블레이드 가시성을 위한 형체
 	float colorValue;
@@ -29,6 +28,7 @@ public class LeftHand : MonoBehaviour
 	void Start()
 	{
 		color = State.Blue;
+		COLOR = State.Blue;
 		playerColor = gameObject.GetComponent<Renderer>();
 		blade.SetActive(false);
 		bladeShape.SetActive(false);

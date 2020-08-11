@@ -10,6 +10,8 @@ TagManager:
   - Enemy
   - Planeta
   - SidBar
+  - LeftHand
+  - RightHand
   layers:
   - Default
   - TransparentFX

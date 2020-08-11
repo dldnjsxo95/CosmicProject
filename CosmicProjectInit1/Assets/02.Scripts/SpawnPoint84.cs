@@ -14,8 +14,6 @@ public class SpawnPoint84 : MonoBehaviour
     public int numberOfNote = 0;
     public static List<GameObject> note = new List<GameObject>();
 
-    public float delayTime = 8;
-    public float rematinTime = 2;
     public float makeDelayTime = 0.12f;
 
     void Awake()

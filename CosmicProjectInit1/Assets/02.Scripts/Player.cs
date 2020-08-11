@@ -78,24 +78,4 @@ public class Player : MonoBehaviour
 		}
 	}
 
-	//void OnTriggerEnter(Collider other)
-	//{
-	//	if (other.gameObject.tag == "RedNotes"  )
-	//	{
-	//		if (isRed)
-	//		{
-	//			SpawnPoint72.note.Add(other.gameObject);
-	//			other.gameObject.SetActive(false);
-	//		}
-	//	}
-
-	//	if (other.gameObject.tag == "BlueNotes" )
-	//	{
-	//		if (!isRed)
-	//		{
-	//			SpawnPoint60.note.Add(other.gameObject);
-	//			other.gameObject.SetActive(false);
-	//		}
-	//	}
-	//}
 }

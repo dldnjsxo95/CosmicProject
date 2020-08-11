@@ -9,6 +9,7 @@ public class Note84 : MonoBehaviour
 	// 생성되는 위치, 목표 위치, ~~시간
 	public GameObject clonePref;
 	GameObject destPos;
+	GameObject ResponPos;
 	public float delayTime;
 	float speed;
 	Vector3 dir;
@@ -18,6 +19,7 @@ public class Note84 : MonoBehaviour
 	private void OnEnable()
 	{
 		rb = GetComponent<Rigidbody>();
+		ResponPos = GameObject.Find("RespwanPosition");
 		destPos = GameObject.Find("Destination84");
 		dir = destPos.transform.position - transform.position;
 		transform.forward = dir;
@@ -36,6 +38,7 @@ public class Note84 : MonoBehaviour
 		if (other.gameObject.name.Contains("DestroyLine"))
 		{
 			SpawnPoint84.note.Add(gameObject);
+			transform.position = ResponPos.transform.position;
 			gameObject.SetActive(false);
             UIManager.Instance.combo = 0;
         }
@@ -48,6 +51,7 @@ public class Note84 : MonoBehaviour
 			clone.transform.forward = transform.forward;
 			Destroy(clone, 1.2f);
 			SpawnPoint84.note.Add(gameObject);
+			transform.position = ResponPos.transform.position;
 			gameObject.SetActive(false);
 		}
 

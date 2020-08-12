@@ -109,7 +109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clonePref: {fileID: 2079234870571157627, guid: 61991eab667ec9947bf32ce135aa8621,
     type: 3}
-  delayTime: 4
+  delayTime: 6
 --- !u!54 &-8336918352817919218
 Rigidbody:
   m_ObjectHideFlags: 0

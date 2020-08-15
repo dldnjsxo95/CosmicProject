@@ -126,4 +126,3 @@ MonoBehaviour:
   particle: {fileID: 3206359971145652612, guid: f2031426a56c6f940993720761b9b0cb,
     type: 3}
   delayTime: 6
-  vibrationTime: 0.1

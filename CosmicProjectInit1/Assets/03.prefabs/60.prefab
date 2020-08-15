@@ -124,6 +124,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayTime: 6
-  vibrationTime: 0.1
   particle: {fileID: 3206359971145652612, guid: f816a78eac4113449b379ad14193f8d4,
     type: 3}

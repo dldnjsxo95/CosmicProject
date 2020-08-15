@@ -26,25 +26,43 @@ public class ReadSignal : MonoBehaviour
 	{
 		spawnList = new List<Spawn>();
 
-		if(MusicManager.MUSIC == MusicManager.Music.DontStartNow)
+		if (MusicManager.MUSIC == MusicManager.Music.DontStartNow)
 		{
-			DontStartNow.Instance.audioSource.Play();
+			StartCoroutine(Dont());
 			musicName = "dontstartnowFull";
 		}
 
 		if (MusicManager.MUSIC == MusicManager.Music.NeverBeLikeU)
 		{
-			NeverBeLikeU.Instance.audioSource.Play();
+			StartCoroutine(Never());
 			musicName = "NeverBeLikeUFull";
 		}
 
 		if (MusicManager.MUSIC == MusicManager.Music.Older)
 		{
-			Older.Instance.audioSource.Play();
+			StartCoroutine(Old());
 			musicName = "Older";
 		}
 
 		ReadSpawnFile();
+	}
+
+	IEnumerator Dont()
+	{
+		yield return new WaitForSeconds(boxDelayTime);
+		DontStartNow.Instance.audioSource.Play();
+	}
+
+	IEnumerator Never()
+	{
+		yield return new WaitForSeconds(boxDelayTime);
+		NeverBeLikeU.Instance.audioSource.Play();
+	}
+
+	IEnumerator Old()
+	{
+		yield return new WaitForSeconds(boxDelayTime);
+		Older.Instance.audioSource.Play();
 	}
 
 
@@ -87,7 +105,7 @@ public class ReadSignal : MonoBehaviour
 		if (spawnIndex < spawnList.Count) // 배열의 모든 값이 출력 되고 나면 나오지 않도록 하기 위해 
 		{
 			// 만약 현재 시간이 텍스트에 적혀있는 시간보다 크다면 , boxDelay = 박스가 생성되서 도착지점까지 걸리는 시간.
-			if (currentDelayTime > spawnList[spawnIndex].delay - boxDelayTime)
+			if (currentDelayTime > spawnList[spawnIndex].delay )
 			{
 				spawnPoint60.transform.position = new Vector3(Random.Range(spawnMinX60, spawnMaxX60), Random.Range(spawnMinY, spawnMaxY), spawnPoint60.transform.position.z); 
 				spawnPoint72.transform.position = new Vector3(Random.Range(spawnMinX72, spawnMaxX72), Random.Range(spawnMinY, spawnMaxY), spawnPoint72.transform.position.z); 

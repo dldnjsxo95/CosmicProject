@@ -40,6 +40,7 @@ public class LeftHand : MonoBehaviour
 		blade.SetActive(false);
 		bladeShape.SetActive(false);
 
+		// 레이져 
 		layser = gameObject.AddComponent<LineRenderer>();
 
 		Material material = Resources.Load("60") as Material;

@@ -5,9 +5,6 @@ using UnityEngine;
 public class Destination : MonoBehaviour
 {
 	public Transform player;
-	public float forward;
-	public float down;
-
 	public float speed;
 	public float MinX;
 	public float MaxX;

@@ -10,6 +10,7 @@ public class Note60 : MonoBehaviour
 	GameObject destPos; // 도착 위치
 	public float delayTime; // 도착지점 까지 걸리는 시간
 	float speed; // 박스의 움직이는 속도
+
 	Vector3 dir; // 움직이는 방향
 
 
@@ -78,6 +79,7 @@ public class Note60 : MonoBehaviour
 		// VR에서 작동
 		if (other.gameObject.tag == "LeftHand" && LeftHand.COLOR == LeftHand.State.Blue)
 		{
+			
 			UIManager.Instance.combo += 1;
 			SpawnPoint60.note.Add(gameObject);
 			GameObject par = Instantiate(particle);
@@ -109,7 +111,10 @@ public class Note60 : MonoBehaviour
 
 
 		}
+
 	}
+
+
 
 
 

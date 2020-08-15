@@ -10,6 +10,7 @@ public class Note72 : MonoBehaviour
     GameObject destPos;
     public GameObject particle;
     public float delayTime;
+
     float speed;
     Vector3 dir;
   
@@ -73,6 +74,8 @@ public class Note72 : MonoBehaviour
 
         if (other.gameObject.tag == "RightHand" && RightHand.COLOR == RightHand.State.Red)
         {
+            
+
             UIManager.Instance.combo += 1;
             SpawnPoint72.note.Add(gameObject);
             GameObject par = Instantiate(particle);
@@ -102,5 +105,6 @@ public class Note72 : MonoBehaviour
 
         }
     }
+
 
 }

@@ -12,6 +12,7 @@ TagManager:
   - SidBar
   - LeftHand
   - RightHand
+  - Button
   layers:
   - Default
   - TransparentFX

@@ -18,10 +18,37 @@ public class ReadSignal : MonoBehaviour
 	public float spawnMaxX84;
 	public float spawnMinY;
 	public float spawnMaxY;
+	public float destMinY;
+	public float destMaxY;
+
 
 	int spawnIndex;
 	float currentDelayTime;
 	string musicName;
+
+	static float ypos60 = 0;
+	static float ypos72 = 0;
+	static float ypos84 = 0;
+
+	public static float YPOS60
+	{
+		get { return ypos60; }
+		set { ypos60 = value; }
+	}
+
+	public static float YPOS72
+	{
+		get { return ypos72; }
+		set { ypos72 = value; }
+	}
+
+	public static float YPOS84
+	{
+		get { return ypos84; }
+		set { ypos84 = value; }
+	}
+
+
 	private void OnEnable()
 	{
 		spawnList = new List<Spawn>();
@@ -105,11 +132,15 @@ public class ReadSignal : MonoBehaviour
 		if (spawnIndex < spawnList.Count) // 배열의 모든 값이 출력 되고 나면 나오지 않도록 하기 위해 
 		{
 			// 만약 현재 시간이 텍스트에 적혀있는 시간보다 크다면 , boxDelay = 박스가 생성되서 도착지점까지 걸리는 시간.
-			if (currentDelayTime > spawnList[spawnIndex].delay )
+			if (currentDelayTime > spawnList[spawnIndex].delay)
 			{
-				spawnPoint60.transform.position = new Vector3(Random.Range(spawnMinX60, spawnMaxX60), Random.Range(spawnMinY, spawnMaxY), spawnPoint60.transform.position.z); 
-				spawnPoint72.transform.position = new Vector3(Random.Range(spawnMinX72, spawnMaxX72), Random.Range(spawnMinY, spawnMaxY), spawnPoint72.transform.position.z); 
-				spawnPoint84.transform.position = new Vector3(Random.Range(spawnMinX84, spawnMaxX84), Random.Range(spawnMinY, spawnMaxY), spawnPoint84.transform.position.z); 
+				spawnPoint60.transform.position = new Vector3(Random.Range(spawnMinX60, spawnMaxX60), Random.Range(spawnMinY, spawnMaxY), spawnPoint60.transform.position.z);
+				spawnPoint72.transform.position = new Vector3(Random.Range(spawnMinX72, spawnMaxX72), Random.Range(spawnMinY, spawnMaxY), spawnPoint72.transform.position.z);
+				spawnPoint84.transform.position = new Vector3(Random.Range(spawnMinX84, spawnMaxX84), Random.Range(spawnMinY, spawnMaxY), spawnPoint84.transform.position.z);
+
+				YPOS60 = Random.Range(destMinY, destMaxY);
+				YPOS72 = Random.Range(destMinY, destMaxY);
+				YPOS84 = Random.Range(destMinY, destMaxY);
 
 				SpawnManage(); // SpawnManager 실행
 			}

@@ -45,10 +45,7 @@ public class Note84 : MonoBehaviour
             UIManager.Instance.combo += 1;
 			WordScale.Instance.ComboSize();
 			NumberScale.Instance.ComboSize();
-
-            UIManager.Instance.score += bonus;
-
-            GameObject clone = Instantiate(clonePref);
+			GameObject clone = Instantiate(clonePref);
 			clone.transform.position = transform.position;
 			clone.transform.forward = transform.forward;
 			Destroy(clone, 1.2f);

@@ -18,14 +18,8 @@ public class UIManager : MonoBehaviour
     public GameObject howToPlay;// 게임 방법 상태 UI캔버스
     public GameObject select;   // 음악 선택 상태 UI캔버스(옆에 옵션창도 같이)
     public GameObject onPlay;   // 리듬게임 플레이 상태의 ui 캔버스
-    public Text comboTxt;       // UI 중 "combo" 글자
-    public Text comboNum;       // UI 중 콤보 수
-    public Text scoreTxt;       // UI 중 점수
-    public GameObject result;   // 게임결과 UI캔버스
 
     public int combo = 0; //콤보수
-    public int score = 0; // 점수
-    public int bonus = 0; // 점수 보너스
 
     public enum UIState
     {
@@ -40,11 +34,9 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         curUIState = UIState.start;
-        start.SetActive(true);
         howToPlay.SetActive(false);
         select.SetActive(false);
         onPlay.SetActive(false);
-        result.SetActive(false);
     }
 
     void Update()
@@ -71,50 +63,11 @@ public class UIManager : MonoBehaviour
             case UIState.onPlay:
                 select.SetActive(false);
                 onPlay.SetActive(true);
-                OnPlayUI();
                 break;
 
             case UIState.result:
                 onPlay.SetActive(false);
                 result.enabled = true;
-                break;
-        }
-    }
-
-    void OnPlayUI()
-    {
-        if (combo == 0)
-        {
-            comboTxt.text = " ";
-            comboNum.text = " ";
-        }
-        else
-        {
-            comboTxt.text = "Combo";
-            comboNum.text = combo.ToString();
-        }
-
-        scoreTxt = score.ToString();
-
-        switch (combo)
-        {
-            case combo < 100 :
-                bonus = 100;
-                break;
-            case combo >= 100:
-                bonus = 200;
-                break;
-            case combo >= 200:
-                bonus = 350;
-                break;
-            case combo >= 300:
-                bonus = 500;
-                break;
-            case combo >= 400:
-                bonus = 750;
-                break;
-            case combo >= 500:
-                bonus = 1000;
                 break;
         }
     }

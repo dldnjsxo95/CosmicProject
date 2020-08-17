@@ -35,13 +35,10 @@ public class SystemManager : MonoBehaviour
         switch (nowState)  // 전체 상태머신의 목차
         {
             case State.start:
-                UIManager.Instance.curUIState = UIManager.UIState.start;
                 break;
             case State.howToPlay:
-                UIManager.Instance.curUIState = UIManager.UIState.howToPlay;
                 break;
             case State.select:
-                UIManager.Instance.curUIState = UIManager.UIState.select;
                 break;
             case State.onPlay:
                 OnPlayState();

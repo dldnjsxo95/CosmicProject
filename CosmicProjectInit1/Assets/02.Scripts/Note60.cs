@@ -83,7 +83,10 @@ public class Note60 : MonoBehaviour
 			UIManager.Instance.combo += 1;
 			WordScale.Instance.ComboSize();
 			NumberScale.Instance.ComboSize();
-			SpawnPoint60.note.Add(gameObject);
+
+            UIManager.Instance.score += bonus;
+
+            SpawnPoint60.note.Add(gameObject);
 			GameObject par = Instantiate(particle);
 			par.transform.position = transform.position;
 			par.transform.forward = -dir;

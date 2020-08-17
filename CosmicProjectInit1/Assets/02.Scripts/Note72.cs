@@ -79,6 +79,9 @@ public class Note72 : MonoBehaviour
             UIManager.Instance.combo += 1;
             WordScale.Instance.ComboSize();
             NumberScale.Instance.ComboSize();
+
+            UIManager.Instance.score += bonus;
+
             SpawnPoint72.note.Add(gameObject);
             GameObject par = Instantiate(particle);
             par.transform.position = transform.position;

@@ -35,13 +35,13 @@ public class SystemManager : MonoBehaviour
         switch (nowState)  // 전체 상태머신의 목차
         {
             case State.start:
-                StartState();
+                UIManager.Instance.curUIState = UIManager.UIState.start;
                 break;
             case State.howToPlay:
-                HowToPlayState();
+                UIManager.Instance.curUIState = UIManager.UIState.howToPlay;
                 break;
             case State.select:
-                SelectState();
+                UIManager.Instance.curUIState = UIManager.UIState.select;
                 break;
             case State.onPlay:
                 OnPlayState();
@@ -50,21 +50,6 @@ public class SystemManager : MonoBehaviour
                 ResultState();
                 break;
         }
-    }
-
-    public void StartState()  //시작로비화면 상태
-    {
-        UIManager.Instance.curUIState = UIManager.UIState.start;
-    }
-
-    public void HowToPlayState()  //게임방법 상태
-    {
-        UIManager.Instance.curUIState = UIManager.UIState.howToPlay;
-    }
-
-    public void SelectState()  //음악선택 상태
-    {
-        UIManager.Instance.curUIState = UIManager.UIState.select;
     }
 
     public void OnPlayState()  //게임플레이 상태
@@ -97,8 +82,6 @@ public class SystemManager : MonoBehaviour
     {
         nowState = State.start;
     }
-
-    //각각의 음악에 대한 선택 버튼 추가 + 음악 선택시 nowState = State.onPlay; 이렇게 바꿔주기
 
     public void OnClickExit()  // 게임 종료
     {

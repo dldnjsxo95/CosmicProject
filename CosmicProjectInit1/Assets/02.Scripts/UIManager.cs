@@ -20,6 +20,12 @@ public class UIManager : MonoBehaviour
     public GameObject onPlay;   // 리듬게임 플레이 상태의 ui 캔버스
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    public Text comboTxt;      // UI 중 "combo" 글자
+    public Text comboNum;      // UI 중 콤보 수
+    public Canvas result;   // 게임결과 UI캔버스
+>>>>>>> parent of ebc502e... 점수 추가
 =======
     public Text comboTxt;      // UI 중 "combo" 글자
     public Text comboNum;      // UI 중 콤보 수
@@ -48,9 +54,17 @@ public class UIManager : MonoBehaviour
         curUIState = UIState.start;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         howToPlay.SetActive(false);
         select.SetActive(false);
         onPlay.SetActive(false);
+=======
+        start.SetActive(false);
+        howToPlay.SetActive(false);
+        select.SetActive(false);
+        onPlay.SetActive(false);
+        result.enabled = false;
+>>>>>>> parent of ebc502e... 점수 추가
 =======
         start.SetActive(false);
         howToPlay.SetActive(false);
@@ -93,7 +107,10 @@ public class UIManager : MonoBehaviour
                 onPlay.SetActive(true);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of ebc502e... 점수 추가
 =======
 >>>>>>> parent of ebc502e... 점수 추가
                 if (combo == 0)
@@ -107,6 +124,9 @@ public class UIManager : MonoBehaviour
                     comboNum.text = combo.ToString();
                 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of ebc502e... 점수 추가
+=======
 >>>>>>> parent of ebc502e... 점수 추가
 =======
 >>>>>>> parent of ebc502e... 점수 추가

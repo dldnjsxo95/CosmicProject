@@ -5206,7 +5206,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_EffectColor: {r: 0.8600696, g: 0.8784314, b: 0.40784314, a: 0.9019608}
+=======
+  m_EffectColor: {r: 0.83104056, g: 0.40970984, b: 0.8773585, a: 0.9019608}
+>>>>>>> parent of ebc502e... 점수 추가
 =======
   m_EffectColor: {r: 0.83104056, g: 0.40970984, b: 0.8773585, a: 0.9019608}
 >>>>>>> parent of ebc502e... 점수 추가
@@ -6128,7 +6132,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_EffectColor: {r: 0.85580105, g: 0.8784314, b: 0.40784314, a: 0.9019608}
+=======
+  m_EffectColor: {r: 0.83104056, g: 0.40970984, b: 0.8773585, a: 0.9019608}
+>>>>>>> parent of ebc502e... 점수 추가
 =======
   m_EffectColor: {r: 0.83104056, g: 0.40970984, b: 0.8773585, a: 0.9019608}
 >>>>>>> parent of ebc502e... 점수 추가

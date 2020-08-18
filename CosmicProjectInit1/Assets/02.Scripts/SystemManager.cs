@@ -37,10 +37,20 @@ public class SystemManager : MonoBehaviour
             case State.start:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 break;
             case State.howToPlay:
                 break;
             case State.select:
+=======
+                StartState();
+                break;
+            case State.howToPlay:
+                HowToPlayState();
+                break;
+            case State.select:
+                SelectState();
+>>>>>>> parent of ebc502e... 점수 추가
 =======
                 StartState();
                 break;

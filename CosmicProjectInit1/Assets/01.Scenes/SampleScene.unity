@@ -808,7 +808,7 @@ MonoBehaviour:
   spawnPoint60: {fileID: 1322591515}
   spawnPoint72: {fileID: 989984286}
   spawnPoint84: {fileID: 1436803473}
-  boxDelayTime: 6
+  boxDelayTime: 2
   spawnMinX60: -50
   spawnMaxX60: 3.1
   spawnMinX72: 3.5
@@ -817,8 +817,11 @@ MonoBehaviour:
   spawnMaxX84: 10
   spawnMinY: 0
   spawnMaxY: 20
+<<<<<<< HEAD
   destMinY: -0.15
   destMaxY: 0.15
+=======
+>>>>>>> parent of 737ccbc... Merge branch 'master' of https://github.com/dldnjsxo95/CosmicProject
 --- !u!4 &274665733
 Transform:
   m_ObjectHideFlags: 0
@@ -1912,7 +1915,7 @@ GameObject:
   - component: {fileID: 575944534}
   m_Layer: 0
   m_Name: Destination72
-  m_TagString: dest72
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4408,7 +4411,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 989984286}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.54, y: 1, z: 100}
+  m_LocalPosition: {x: 8.54, y: 1, z: 40}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4430,7 +4433,7 @@ MonoBehaviour:
     type: 3}
   noteParent: {fileID: 1962382395}
   numberOfNote: 60
-  makeDelayTime: 0.24
+  makeDelayTime: 0.12
 --- !u!1 &1004166742
 GameObject:
   m_ObjectHideFlags: 0
@@ -4443,7 +4446,7 @@ GameObject:
   - component: {fileID: 1004166744}
   m_Layer: 0
   m_Name: Destination84
-  m_TagString: dest84
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5494,7 +5497,7 @@ MonoBehaviour:
     type: 3}
   noteParent: {fileID: 707063327}
   numberOfNote: 60
-  makeDelayTime: 0.24
+  makeDelayTime: 0.12
 --- !u!4 &1322591517
 Transform:
   m_ObjectHideFlags: 0
@@ -5503,7 +5506,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1322591515}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: 1, z: 100}
+  m_LocalPosition: {x: -2, y: 1, z: 40}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5949,7 +5952,7 @@ MonoBehaviour:
     type: 3}
   noteParent: {fileID: 1280506814}
   numberOfNote: 60
-  makeDelayTime: 0.24
+  makeDelayTime: 0.12
 --- !u!4 &1436803475
 Transform:
   m_ObjectHideFlags: 0
@@ -5958,7 +5961,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1436803473}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.85, y: 1, z: 100}
+  m_LocalPosition: {x: 2.85, y: 1, z: 40}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7670,7 +7673,7 @@ GameObject:
   - component: {fileID: 1990402056}
   m_Layer: 0
   m_Name: Destination60
-  m_TagString: dest60
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8244,7 +8247,7 @@ PrefabInstance:
     - target: {fileID: 5247313315073825736, guid: e114036602a19d14dbff57c78fbd4929,
         type: 3}
       propertyPath: m_Radius
-      value: 0.5
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 6510980692568973225, guid: e114036602a19d14dbff57c78fbd4929,
         type: 3}
@@ -8490,7 +8493,7 @@ PrefabInstance:
     - target: {fileID: 1600745637741163540, guid: 5cbcca4d212793244bdd4a32618dd9a3,
         type: 3}
       propertyPath: m_Radius
-      value: 0.5
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 1600745637741163540, guid: 5cbcca4d212793244bdd4a32618dd9a3,
         type: 3}

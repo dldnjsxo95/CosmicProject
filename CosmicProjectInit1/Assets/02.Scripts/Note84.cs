@@ -43,9 +43,7 @@ public class Note84 : MonoBehaviour
 		if (other.gameObject.name.Contains("(BladeTempShape)"))
 		{
             UIManager.Instance.combo += 1;
-			WordScale.Instance.ComboSize();
-			NumberScale.Instance.ComboSize();
-			GameObject clone = Instantiate(clonePref);
+            GameObject clone = Instantiate(clonePref);
 			clone.transform.position = transform.position;
 			clone.transform.forward = transform.forward;
 			Destroy(clone, 1.2f);

@@ -13,9 +13,6 @@ TagManager:
   - LeftHand
   - RightHand
   - Button
-  - dest60
-  - dest72
-  - dest84
   layers:
   - Default
   - TransparentFX

@@ -5204,7 +5204,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   m_EffectColor: {r: 0.8600696, g: 0.8784314, b: 0.40784314, a: 0.9019608}
+=======
+  m_EffectColor: {r: 0.83104056, g: 0.40970984, b: 0.8773585, a: 0.9019608}
+>>>>>>> parent of ebc502e... 점수 추가
   m_EffectDistance: {x: 3, y: 3}
   m_UseGraphicAlpha: 1
 --- !u!114 &1252827272
@@ -6118,7 +6122,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   m_EffectColor: {r: 0.85580105, g: 0.8784314, b: 0.40784314, a: 0.9019608}
+=======
+  m_EffectColor: {r: 0.83104056, g: 0.40970984, b: 0.8773585, a: 0.9019608}
+>>>>>>> parent of ebc502e... 점수 추가
   m_EffectDistance: {x: 3, y: 3}
   m_UseGraphicAlpha: 1
 --- !u!114 &1486273797
@@ -8314,6 +8322,78 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e114036602a19d14dbff57c78fbd4929, type: 3}
+<<<<<<< HEAD
+=======
+--- !u!1001 &3468685719876727857
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3468685719275973186, guid: 31f8da56f1449ff42baf97e6325c2fa7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468685719275973186, guid: 31f8da56f1449ff42baf97e6325c2fa7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -40.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468685719275973186, guid: 31f8da56f1449ff42baf97e6325c2fa7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -86.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468685719275973186, guid: 31f8da56f1449ff42baf97e6325c2fa7,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468685719275973186, guid: 31f8da56f1449ff42baf97e6325c2fa7,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468685719275973186, guid: 31f8da56f1449ff42baf97e6325c2fa7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468685719275973186, guid: 31f8da56f1449ff42baf97e6325c2fa7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468685719275973186, guid: 31f8da56f1449ff42baf97e6325c2fa7,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468685719275973186, guid: 31f8da56f1449ff42baf97e6325c2fa7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468685719275973186, guid: 31f8da56f1449ff42baf97e6325c2fa7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468685719275973186, guid: 31f8da56f1449ff42baf97e6325c2fa7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468685719275973214, guid: 31f8da56f1449ff42baf97e6325c2fa7,
+        type: 3}
+      propertyPath: m_Name
+      value: Stage_2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 31f8da56f1449ff42baf97e6325c2fa7, type: 3}
+>>>>>>> parent of ebc502e... 점수 추가
 --- !u!1001 &4188013640298365409
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8468,3 +8548,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5cbcca4d212793244bdd4a32618dd9a3, type: 3}
+<<<<<<< HEAD
+=======
+--- !u!1001 &5515926204912075493
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5515926205899206065, guid: b468327823e2efc4e942797d487b263f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5515926205899206065, guid: b468327823e2efc4e942797d487b263f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -40.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5515926205899206065, guid: b468327823e2efc4e942797d487b263f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 49.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5515926205899206065, guid: b468327823e2efc4e942797d487b263f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5515926205899206065, guid: b468327823e2efc4e942797d487b263f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5515926205899206065, guid: b468327823e2efc4e942797d487b263f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5515926205899206065, guid: b468327823e2efc4e942797d487b263f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5515926205899206065, guid: b468327823e2efc4e942797d487b263f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 5515926205899206065, guid: b468327823e2efc4e942797d487b263f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5515926205899206065, guid: b468327823e2efc4e942797d487b263f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5515926205899206065, guid: b468327823e2efc4e942797d487b263f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5515926205899206069, guid: b468327823e2efc4e942797d487b263f,
+        type: 3}
+      propertyPath: m_Name
+      value: Stage_1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b468327823e2efc4e942797d487b263f, type: 3}
+>>>>>>> parent of ebc502e... 점수 추가
